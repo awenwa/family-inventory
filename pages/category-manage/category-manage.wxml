@@ -1,0 +1,39 @@
+<!-- pages/category-manage/category-manage.wxml -->
+<view class="page">
+  <!-- 标题栏 -->
+  <view class="page-header">
+    <text class="page-title">分类管理</text>
+    <text class="page-sub">可添加、删除自定义分类</text>
+  </view>
+
+  <!-- 分类列表 -->
+  <view class="cat-list">
+    <view wx:for="{{categories}}" wx:key="id" class="cat-item">
+      <!-- 左侧：图标+名称+数量 -->
+      <view class="cat-left" bindtap="editCat" data-id="{{item.id}}">
+        <view class="cat-icon-wrap" style="background:{{item.color}}30">
+          <text class="cat-icon">{{item.icon}}</text>
+        </view>
+        <view class="cat-info">
+          <text class="cat-name">{{item.name}}</text>
+          <text class="cat-meta">{{item.count || 0}} 件物品</text>
+        </view>
+      </view>
+      <!-- 右侧：编辑+删除 -->
+      <view class="cat-actions">
+        <view class="act-btn" bindtap="editCat" data-id="{{item.id}}">
+          <text>编辑</text>
+        </view>
+        <view class="act-btn danger" bindtap="deleteCat" data-id="{{item.id}}" data-name="{{item.name}}" data-count="{{item.count || 0}}">
+          <text>删除</text>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 添加分类按钮 -->
+  <view class="add-cat-btn" bindtap="addCat">
+    <text class="add-icon">+</text>
+    <text class="add-text">添加新分类</text>
+  </view>
+</view>
