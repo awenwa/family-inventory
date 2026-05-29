@@ -1,0 +1,40 @@
+/* app.wxss - 全局样式 */
+
+page {
+  font-family: -apple-system, "PingFang SC", "Microsoft YaHei", "Helvetica Neue", sans-serif;
+  background: #FAFAF7;
+  color: #1A1A18;
+  font-size: 28rpx;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 全局重置 */
+view, text {
+  box-sizing: border-box;
+}
+
+/* 安全区域适配 */
+page { padding-top: env(safe-area-inset-top); }
+page { padding-bottom: env(safe-area-inset-bottom); }
+
+/* 去除按钮默认样式 */
+button::after { border: none; }
+button {
+  background: transparent;
+  padding: 0;
+  margin: 0;
+  border-radius: 0;
+  line-height: inherit;
+  font-size: inherit;
+  color: inherit;
+}
+
+/* 弹性布局工具类 */
+.flex { display: flex; }
+.flex-col { display: flex; flex-direction: column; }
+.flex-1 { flex: 1; }
+.items-center { align-items: center; }
+.justify-between { justify-content: space-between; }
+.gap-sm { gap: 12rpx; }
+.gap-md { gap: 20rpx; }
