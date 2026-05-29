@@ -1,0 +1,186 @@
+/* pages/item-detail/item-detail.wxss */
+page { background: #FAFAF7; }
+
+.page { min-height: 100vh; padding-bottom: 40rpx; }
+
+/* 头部 */
+.detail-header {
+  display: flex;
+  align-items: center;
+  padding: 48rpx 36rpx;
+  gap: 24rpx;
+}
+
+.header-icon {
+  font-size: 80rpx;
+  flex-shrink: 0;
+}
+
+.header-info { flex: 1; }
+
+.header-name {
+  display: block;
+  font-size: 40rpx;
+  font-weight: 800;
+  color: #1A1A18;
+  margin-bottom: 8rpx;
+  line-height: 1.2;
+}
+
+.header-cat {
+  display: block;
+  font-size: 26rpx;
+  color: #7A7A6A;
+}
+
+.header-edit {
+  background: #fff;
+  border: 1rpx solid #E0DDD5;
+  border-radius: 100rpx;
+  padding: 12rpx 28rpx;
+  font-size: 26rpx;
+  color: #3D7A5C;
+  font-weight: 600;
+}
+
+/* 价格卡片 */
+.price-card {
+  display: flex;
+  margin: 0 24rpx 24rpx;
+  background: #fff;
+  border-radius: 20rpx;
+  overflow: hidden;
+  box-shadow: 0 2rpx 12rpx rgba(0,0,0,0.05);
+}
+
+.price-main {
+  flex: 1;
+  padding: 28rpx 16rpx;
+  text-align: center;
+}
+
+.price-sep {
+  width: 1rpx;
+  background: #F0EDE6;
+}
+
+.price-label {
+  display: block;
+  font-size: 22rpx;
+  color: #9E9E8A;
+  margin-bottom: 8rpx;
+}
+
+.price-val {
+  display: block;
+  font-size: 34rpx;
+  font-weight: 800;
+  color: #C88A2C;
+}
+
+.price-val.date {
+  font-size: 24rpx;
+  font-weight: 600;
+  color: #1A1A18;
+}
+
+.price-val.highlight {
+  font-size: 28rpx;
+  color: #3D7A5C;
+}
+
+/* 信息分组 */
+.info-group {
+  margin: 0 24rpx 24rpx;
+  background: #fff;
+  border-radius: 20rpx;
+  overflow: hidden;
+  box-shadow: 0 2rpx 12rpx rgba(0,0,0,0.04);
+}
+
+.group-title {
+  display: block;
+  font-size: 28rpx;
+  font-weight: 700;
+  color: #1A1A18;
+  padding: 28rpx 32rpx 16rpx;
+}
+
+.info-list { padding: 0 8rpx; }
+
+.info-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 22rpx 24rpx;
+  border-bottom: 1rpx solid #F5F3EE;
+}
+
+.info-row:last-child { border-bottom: none; }
+
+.info-key {
+  font-size: 28rpx;
+  color: #7A7A6A;
+}
+
+.info-val {
+  font-size: 28rpx;
+  color: #1A1A18;
+  font-weight: 500;
+  max-width: 60%;
+  text-align: right;
+}
+
+.info-empty {
+  padding: 24rpx;
+  text-align: center;
+  font-size: 26rpx;
+  color: #C8C4B8;
+}
+
+/* 备注 */
+.remark-card {
+  margin: 0 32rpx 28rpx;
+  padding: 24rpx;
+  background: #FAFAF7;
+  border-radius: 12rpx;
+  font-size: 28rpx;
+  color: #3A3A30;
+  line-height: 1.8;
+}
+
+/* 标签 */
+.tag-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12rpx;
+  padding: 0 32rpx 28rpx;
+}
+
+.tag-chip {
+  font-size: 24rpx;
+  color: #3D7A5C;
+  background: #3D7A5C12;
+  border: 1rpx solid #3D7A5C30;
+  padding: 8rpx 20rpx;
+  border-radius: 100rpx;
+}
+
+/* 底部操作 */
+.bottom-actions {
+  padding: 32rpx 24rpx;
+}
+
+.action-btn {
+  padding: 28rpx;
+  border-radius: 16rpx;
+  text-align: center;
+  font-size: 30rpx;
+  font-weight: 600;
+}
+
+.action-btn.danger {
+  background: #fff;
+  border: 1rpx solid #E8D8D8;
+  color: #E05050;
+}
