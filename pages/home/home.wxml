@@ -1,0 +1,93 @@
+<!-- pages/home/home.wxml -->
+<view class="page">
+  <!-- 顶部欢迎 -->
+  <view class="hero">
+    <view class="hero-inner">
+      <text class="hero-date">{{today}}</text>
+      <text class="hero-greeting">{{greeting}}</text>
+      <text class="hero-sub">记录生活，理清家底</text>
+    </view>
+    <view class="hero-wave"></view>
+  </view>
+
+  <!-- 统计卡片 -->
+  <view class="stats-row">
+    <view class="stat-card primary" bindtap="goBrowse">
+      <text class="stat-num">{{stats.total}}</text>
+      <text class="stat-label">件物品</text>
+      <view class="stat-icon">📦</view>
+    </view>
+    <view class="stat-card accent" bindtap="goBrowse">
+      <text class="stat-num">¥{{stats.totalValue_str}}</text>
+      <text class="stat-label">总价值</text>
+      <view class="stat-icon">💰</view>
+    </view>
+    <view class="stat-card secondary" bindtap="goBrowse">
+      <text class="stat-num">{{stats.thisMonth}}</text>
+      <text class="stat-label">本月新增</text>
+      <view class="stat-icon">📆</view>
+    </view>
+  </view>
+
+  <!-- 最近添加 -->
+  <view class="section">
+    <view class="section-header">
+      <text class="section-title">最近添加</text>
+      <text class="section-more" bindtap="goBrowse">查看全部 ›</text>
+    </view>
+
+    <view wx:if="{{recentItems.length > 0}}" class="item-list">
+      <view 
+        wx:for="{{recentItems}}" 
+        wx:key="id" 
+        class="item-row"
+        bindtap="goDetail"
+        data-id="{{item.id}}"
+      >
+        <view class="item-icon-wrap" style="background:{{item.category_color}}22">
+          <text class="item-icon">{{item.category_icon}}</text>
+        </view>
+        <view class="item-info">
+          <text class="item-name">{{item.name}}</text>
+          <text class="item-meta">{{item.category_name}} · {{item.dateDiff}}</text>
+        </view>
+        <view class="item-right">
+          <text class="item-price">¥{{item.price_str}}</text>
+          <text class="item-arrow">›</text>
+        </view>
+      </view>
+    </view>
+
+    <view wx:else class="empty-state">
+      <text class="empty-icon">🏠</text>
+      <text class="empty-text">还没有物品\n点击下方按钮添加第一件</text>
+    </view>
+  </view>
+
+  <!-- 分类概览 -->
+  <view class="section">
+    <view class="section-header">
+      <text class="section-title">分类概览</text>
+      <text class="section-more" bindtap="goBrowse">全部分类 ›</text>
+    </view>
+    <view class="category-grid">
+      <view 
+        wx:for="{{categories}}" 
+        wx:key="id" 
+        class="category-chip"
+        style="background:{{item.color}}18;border-color:{{item.color}}44"
+        bindtap="goCategory"
+        data-id="{{item.id}}"
+      >
+        <text class="chip-icon">{{item.icon}}</text>
+        <text class="chip-name">{{item.name}}</text>
+        <text class="chip-count" style="color:{{item.color}}">{{item.count || 0}}</text>
+      </view>
+    </view>
+  </view>
+
+  <!-- 底部浮动按钮 -->
+  <view class="fab" bindtap="goAdd">
+    <text class="fab-plus">+</text>
+  </view>
+</view>
