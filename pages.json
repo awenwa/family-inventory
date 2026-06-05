@@ -1,0 +1,30 @@
+{
+  "pages": [
+    { "path": "pages/home/home", "style": { "navigationBarTitleText": "家庭用品管理", "navigationBarBackgroundColor": "#FAFAF7", "enablePullDownRefresh": true } },
+    { "path": "pages/browse/browse", "style": { "navigationBarTitleText": "分类浏览", "navigationBarBackgroundColor": "#FAFAF7" } },
+    { "path": "pages/search/search", "style": { "navigationBarTitleText": "搜索", "navigationBarBackgroundColor": "#FAFAF7" } },
+    { "path": "pages/settings/settings", "style": { "navigationBarTitleText": "设置", "navigationBarBackgroundColor": "#FAFAF7" } },
+    { "path": "pages/item-add/item-add", "style": { "navigationBarTitleText": "添加物品", "navigationBarBackgroundColor": "#FAFAF7" } },
+    { "path": "pages/item-detail/item-detail", "style": { "navigationBarTitleText": "物品详情", "navigationBarBackgroundColor": "#FAFAF7" } },
+    { "path": "pages/category/category", "style": { "navigationBarTitleText": "分类", "navigationBarBackgroundColor": "#FAFAF7" } },
+    { "path": "pages/category-manage/category-manage", "style": { "navigationBarTitleText": "分类管理", "navigationBarBackgroundColor": "#FAFAF7" } }
+  ],
+  "globalStyle": {
+    "navigationBarTextStyle": "black",
+    "navigationBarBackgroundColor": "#FAFAF7",
+    "backgroundColor": "#FAFAF7",
+    "backgroundTextStyle": "dark"
+  },
+  "tabBar": {
+    "color": "#9E9E8A",
+    "selectedColor": "#3D7A5C",
+    "backgroundColor": "#FAFAF7",
+    "borderStyle": "white",
+    "list": [
+      { "pagePath": "pages/home/home", "text": "首页", "iconPath": "static/icons/home.png", "selectedIconPath": "static/icons/home-active.png" },
+      { "pagePath": "pages/browse/browse", "text": "分类", "iconPath": "static/icons/category.png", "selectedIconPath": "static/icons/category-active.png" },
+      { "pagePath": "pages/search/search", "text": "搜索", "iconPath": "static/icons/search.png", "selectedIconPath": "static/icons/search-active.png" },
+      { "pagePath": "pages/settings/settings", "text": "设置", "iconPath": "static/icons/settings.png", "selectedIconPath": "static/icons/settings-active.png" }
+    ]
+  }
+}
